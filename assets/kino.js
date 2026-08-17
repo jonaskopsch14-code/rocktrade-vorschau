@@ -21,7 +21,6 @@
   var ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   document.addEventListener("DOMContentLoaded", function () {
-    drehplatten();
     standbilder();
     wortweise();
     zaehler();

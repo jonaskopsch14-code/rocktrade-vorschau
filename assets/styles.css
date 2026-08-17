@@ -972,12 +972,12 @@ h2.titel {
 /* Die hohe Sektion gibt den Scrollweg vor, die Bühne darin klebt. */
 .dreh {
   position: relative;
-  height: var(--dreh-hoehe, 320vh);
+  height: clamp(34rem, 62vw, 48rem);
   background-color: #070B0E;
 }
 .dreh__buehne {
-  position: sticky; top: 0;
-  height: 100svh;
+  position: relative;
+  height: 100%;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -990,7 +990,7 @@ h2.titel {
   display: block;
 }
 .dreh__ersatz { transition: opacity var(--dur-slow) var(--ease); z-index: 1; }
-.dreh__leinwand { z-index: 0; }
+.dreh__leinwand { display: none; }
 .dreh--bereit .dreh__leinwand { z-index: 2; }
 
 /* Abdunklung, damit die Schrift immer lesbar bleibt */
@@ -1021,6 +1021,8 @@ h2.titel {
   pointer-events: none;
 }
 .dreh__text.da { opacity: 1; transform: none; pointer-events: auto; }
+.dreh__text:first-of-type { opacity: 1; transform: none; pointer-events: auto; }
+.dreh__text:not(:first-of-type) { display: none; }
 /* Der Text liegt über dem Fahrzeug — der Schatten hält ihn auch über
    hellem Lack lesbar, ohne einen sichtbaren Kasten zu brauchen. */
 .dreh__text h2 { text-shadow: 0 2px 28px rgba(7,11,14,.85), 0 1px 3px rgba(7,11,14,.7); }
@@ -1038,6 +1040,7 @@ h2.titel {
 .dreh__text--rechts { justify-self: end; text-align: right; }
 
 .dreh__hinweis {
+  display: none;
   position: absolute; z-index: 4;
   left: 50%; bottom: var(--space-8);
   transform: translateX(-50%);
