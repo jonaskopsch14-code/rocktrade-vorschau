@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Kontakt | Rocktrade GmbH Leipzig</title>
+<meta name="description" content="Rocktrade GmbH, Ludwig-Hupfeld-Straße 23e, 04178 Leipzig. Telefon 0341 22802620, kontakt@rocktrade.de. Mo-Fr 10-18 Uhr, Sa 10-13 Uhr.">
+
+<link rel="canonical" href="https://rocktrade.de/kontakt.html">
+<meta name="theme-color" content="#0B1116">
+<link rel="icon" href="assets/rocktrade-logo-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+<script defer src="assets/script.js"></script>
+</head>
+
+<body>
+
+<a class="sprung" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="kopf__logo" href="index.html" aria-label="Rocktrade GmbH, zur Startseite">
+      <img src="assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34">
+    </a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen">
+      <span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener">Fahrzeuge</a></li>
+        <li><a href="performance-experience.html">Performance Experience</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li class="nav__aktion"><a class="knopf knopf--gold" href="tel:+4934122802620">Anrufen</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktion">
+      <a class="knopf knopf--gold" href="tel:+4934122802620">Anrufen</a>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <section class="sektion" style="padding-block-start: var(--space-20)">
+    <div class="wrap">
+      <div class="kopfzeile zeig">
+        <p class="augenbraue">Kontakt</p>
+        <h2 class="titel" style="font-size: var(--fs-3xl)">Schreiben Sie uns, oder rufen Sie einfach an</h2>
+        <p>
+          Ein Anruf ist meistens schneller als drei Mails. Wenn es Ihnen lieber schriftlich
+          ist, nutzen Sie das Formular. Wir melden uns innerhalb eines Werktags.
+        </p>
+      </div>
+
+      <div class="duo" style="align-items: start">
+
+        <!-- ---------- Formular ---------- -->
+        <form class="formular zeig" action="kontakt.php" method="post" data-schutz>
+
+          <!-- Spamfalle, für Menschen unsichtbar -->
+          <div class="honigtopf" aria-hidden="true">
+            <label for="webseite">Bitte leer lassen</label>
+            <input type="text" id="webseite" name="webseite" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="feld">
+            <label for="anliegen">Worum geht es? <span class="pflicht">*</span></label>
+            <select id="anliegen" name="anliegen" required>
+              <option value="">Bitte auswählen</option>
+              <option>Frage zu einem Fahrzeug</option>
+              <option>Rückruf gewünscht</option>
+              <option>Ich möchte mein Fahrzeug verkaufen</option>
+              <option>Performance Experience</option>
+              <option>Werkstatt und Service</option>
+              <option>Etwas anderes</option>
+            </select>
+          </div>
+
+          <div class="feldpaar">
+            <div class="feld">
+              <label for="name">Name <span class="pflicht">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="feld">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+              <span class="hinweis">Nur nötig, wenn Sie einen Rückruf möchten.</span>
+            </div>
+          </div>
+
+          <div class="feld">
+            <label for="email">E-Mail <span class="pflicht">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="feld">
+            <label for="fahrzeug">Um welches Fahrzeug geht es?</label>
+            <input type="text" id="fahrzeug" name="fahrzeug" placeholder="z. B. Dodge Challenger SRT 392">
+          </div>
+
+          <div class="feld">
+            <label for="nachricht">Ihre Nachricht <span class="pflicht">*</span></label>
+            <textarea id="nachricht" name="nachricht" required placeholder="Zwei, drei Sätze reichen."></textarea>
+          </div>
+
+          <div class="kasten">
+            <input type="checkbox" id="einwilligung" name="einwilligung" required>
+            <label for="einwilligung">
+              Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage
+              verarbeitet werden. <span class="pflicht">*</span>
+              Mehr dazu im <a href="datenschutz.html">Datenschutz</a>.
+            </label>
+          </div>
+
+          <div class="formular__fuss">
+            <button class="knopf knopf--gold" type="submit">Nachricht senden</button>
+            <p class="hinweis" style="margin:0">Ihre Daten gehen direkt an uns, sonst nirgendwohin.</p>
+          </div>
+        </form>
+
+        <!-- ---------- Daten daneben ---------- -->
+        <div class="zeig" style="--i:1">
+          <dl class="kontaktdaten">
+            <div class="zeile">
+              <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <div>
+                <dt>Adresse</dt>
+                <dd>
+                  Ludwig-Hupfeld-Straße 23e
+                  <small>04178 Leipzig</small>
+                  <small style="margin-block-start: var(--space-2)">
+                    <a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ludwig-Hupfeld-Stra%C3%9Fe+23e+04178+Leipzig" target="_blank" rel="noopener">
+                      Route planen
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11L11 5M11 5H6M11 5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </small>
+                </dd>
+              </div>
+            </div>
+
+            <div class="zeile">
+              <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.5 5.5c0 8 6 14 14 14l1.5-3-4-2-1.7 1.7a13 13 0 0 1-5-5L11 9.5l-2-4-3 1.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <div>
+                <dt>Telefon</dt>
+                <dd>
+                  <a href="tel:+4934122802620">0341 22802620</a>
+                  <small><a href="tel:+4917623268022">0176 23268022</a></small>
+                </dd>
+              </div>
+            </div>
+
+            <div class="zeile">
+              <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <div>
+                <dt>E-Mail</dt>
+                <dd><a href="mailto:kontakt@rocktrade.de">kontakt@rocktrade.de</a></dd>
+              </div>
+            </div>
+
+            <div class="zeile">
+              <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+              <div>
+                <dt>Öffnungszeiten</dt>
+                <dd>
+                  Montag bis Freitag 10-18 Uhr
+                  <small>Samstag 10-13 Uhr</small>
+                  <small>Sonntag geschlossen</small>
+                </dd>
+              </div>
+            </div>
+
+            <div class="zeile">
+              <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></span>
+              <div>
+                <dt>Sonst</dt>
+                <dd>
+                  <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener">Bestand auf mobile.de</a>
+                  <small><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener">Instagram @rocktrade_gmbh</a></small>
+                </dd>
+              </div>
+            </div>
+          </dl>
+
+          <!-- Bewusst keine eingebettete Karte: Google Maps im iframe würde
+               Besucherdaten an Google schicken und ein Cookie-Banner nötig machen.
+               Der Link oben öffnet die Route erst nach einem Klick. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__gitter">
+      <div>
+        <div class="fuss__logo"><img src="assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38"></div>
+        <p class="fuss__text">
+          Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen.
+          Geprüft, transparent und persönlich beraten.
+        </p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="performance-experience.html">Performance Experience</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fahrzeuge</h4>
+        <ul>
+          <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener">Bestand auf mobile.de</a></li>
+          <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener">Bewertungen</a></li>
+          <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+4934122802620">0341 22802620</a></li>
+          <li><a href="mailto:kontakt@rocktrade.de">kontakt@rocktrade.de</a></li>
+          <li>Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fuss__unten">
+      <p>© <span id="jahr">2026</span> Rocktrade GmbH</p>
+      <nav aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+      <p>Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
