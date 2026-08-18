@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rocktrade → Webstudio: Seiten kopieren</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px;
+    background: #0B1116; color: #EDF1F4;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .unter { color: #A9B6C0; margin: 0 0 32px; font-size: 17px; }
+  ol.anleitung { background: #101A21; border: 1px solid rgba(255,255,255,.09);
+    border-radius: 12px; padding: 22px 22px 22px 42px; margin: 0 0 32px; }
+  ol.anleitung li { margin-bottom: 8px; color: #A9B6C0; }
+  ol.anleitung li b { color: #EDF1F4; }
+  .zeile { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    background: #101A21; border: 1px solid rgba(255,255,255,.09);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+  .name { font-weight: 700; font-size: 17px; flex: 1 1 200px; }
+  .status { color: #7E8D99; font-size: 14px; min-width: 130px; }
+  .status.ok { color: #58BEDC; font-weight: 600; }
+  .status.fehler { color: #E5806A; font-weight: 600; }
+  button {
+    background: #D7B147; color: #0B1116; border: 0; border-radius: 6px;
+    padding: 12px 22px; font-size: 15px; font-weight: 700; cursor: pointer;
+    font-family: inherit;
+  }
+  button:hover { background: #E5C46A; }
+  button:disabled { opacity: .5; cursor: default; }
+  .hinweis { margin-top: 32px; padding: 18px; border-left: 3px solid #D7B147;
+    background: #101A21; border-radius: 0 8px 8px 0; color: #A9B6C0; font-size: 15px; }
+  .hinweis b { color: #EDF1F4; }
+  code { background: #16222B; padding: 2px 7px; border-radius: 4px;
+    font-family: ui-monospace, Consolas, monospace; font-size: .92em; color: #E5C46A; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Rocktrade → Webstudio</h1>
+  <p class="unter">Acht Seiten, fertig zum Einfügen. Pro Seite ein Klick hier, dann einmal <code>Strg+V</code> in Webstudio.</p>
+
+  <ol class="anleitung">
+    <li>In Webstudio die Seite anlegen und <b>auf die Leinwand klicken</b>, damit <code>&lt;body&gt;</code> ausgewählt ist.</li>
+    <li>Hier unten auf <b>Kopieren</b> klicken. Beim ersten Mal fragt der Browser nach Erlaubnis für die Zwischenablage — <b>Zulassen</b>.</li>
+    <li>Zurück in Webstudio: <b>Strg+V</b>. Webstudio wandelt das HTML in eigene Bausteine um.</li>
+    <li>Nächste Seite, von vorn.</li>
+  </ol>
+
+  <div id="liste"></div>
+
+  <div class="hinweis">
+    <b>Wenn Strg+V nichts tut:</b> in Webstudio erst irgendwo auf die Leinwand klicken,
+    damit der Editor den Fokus hat, dann noch einmal Strg+V.<br><br>
+    <b>Reihenfolge:</b> Fang mit der Startseite an. Wenn die sitzt, ist der Rest gleich.
+  </div>
+
+</div>
+
+<script>
+var SEITEN = [
+  { name: "Startseite",             datei: "startseite-webstudio.html" },
+  { name: "Performance Experience", datei: "performance-experience-webstudio.html" },
+  { name: "Über uns",               datei: "ueber-uns-webstudio.html" },
+  { name: "Kontakt",                datei: "kontakt-webstudio.html" },
+  { name: "Impressum",              datei: "impressum-webstudio.html" },
+  { name: "Datenschutz",            datei: "datenschutz-webstudio.html" },
+  { name: "Danke",                  datei: "danke-webstudio.html" },
+  { name: "Fehlerseite 404",        datei: "404-webstudio.html" }
+];
+
+var liste = document.getElementById("liste");
+
+SEITEN.forEach(function (s) {
+  var zeile = document.createElement("div");
+  zeile.className = "zeile";
+
+  var name = document.createElement("span");
+  name.className = "name";
+  name.textContent = s.name;
+
+  var status = document.createElement("span");
+  status.className = "status";
+  status.textContent = "";
+
+  var knopf = document.createElement("button");
+  knopf.type = "button";
+  knopf.textContent = "Kopieren";
+
+  knopf.addEventListener("click", function () {
+    knopf.disabled = true;
+    status.className = "status";
+    status.textContent = "hole Datei …";
+
+    fetch(s.datei, { cache: "no-cache" })
+      .then(function (a) {
+        if (!a.ok) throw new Error("HTTP " + a.status);
+        return a.text();
+      })
+      .then(function (text) {
+        status.textContent = "lege in Zwischenablage …";
+        // text/html, damit Webstudio es als HTML erkennt und umwandelt
+        var item = new ClipboardItem({
+          "text/html":  new Blob([text], { type: "text/html" }),
+          "text/plain": new Blob([text], { type: "text/plain" })
+        });
+        return navigator.clipboard.write([item]).then(function () { return text.length; });
+      })
+      .then(function (laenge) {
+        status.className = "status ok";
+        status.textContent = "✓ kopiert (" + Math.round(laenge / 1024) + " KB) — jetzt Strg+V";
+        knopf.disabled = false;
+      })
+      .catch(function (e) {
+        // Rückfallweg: unsichtbares Feld markieren und execCommand
+        fetch(s.datei, { cache: "no-cache" }).then(function (a) { return a.text(); }).then(function (text) {
+          var feld = document.createElement("textarea");
+          feld.value = text;
+          feld.style.position = "fixed";
+          feld.style.left = "-9999px";
+          document.body.appendChild(feld);
+          feld.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (x) { ok = false; }
+          document.body.removeChild(feld);
+          if (ok) {
+            status.className = "status ok";
+            status.textContent = "✓ kopiert (einfach) — jetzt Strg+V";
+          } else {
+            status.className = "status fehler";
+            status.textContent = "✗ " + e.message;
+          }
+          knopf.disabled = false;
+        });
+      });
+  });
+
+  zeile.appendChild(name);
+  zeile.appendChild(status);
+  zeile.appendChild(knopf);
+  liste.appendChild(zeile);
+});
+</script>
+</body>
+</html>
