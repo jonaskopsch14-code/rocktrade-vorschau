@@ -1,0 +1,660 @@
+<!-- ============================================================
+     ROCKTRADE GmbH — Startseite, Fassung fuer WEBSTUDIO
+     ------------------------------------------------------------
+     Diese Datei ist bewusst anders gebaut als die Originalseite:
+
+       * Alle Gestaltung steht INLINE an jedem Element.
+         Webstudio uebernimmt beim Einfuegen nur Inline-Styles,
+         ein <style>-Block oder eine CSS-Datei wuerde verpuffen.
+       * Keine CSS-Variablen, keine @media-Abfragen, keine :hover.
+         Das laesst sich inline nicht ausdruecken. Die Seite bleibt
+         trotzdem responsiv: ueber clamp() und Grids mit auto-fit.
+       * Kein <script>, kein <style>, kein <form action="...php">.
+       * Keine SVG-Icons. Webstudio wirft SVG beim Einfuegen haeufig
+         weg, deshalb stehen dort Textzeichen (aus dem Zeichensatz).
+       * Alle Bilder liegen als ABSOLUTE URL vor und sind sofort
+         erreichbar. In Webstudio spaeter einfach durch eigene
+         Uploads ersetzen.
+
+     So kommt es hinein:
+       1. Diese Datei im Editor oeffnen, alles markieren, kopieren.
+       2. In Webstudio auf die Leinwand klicken und einfuegen.
+          Webstudio wandelt das in eigene Bausteine um.
+
+     Was hier BEWUSST FEHLT, weil Webstudio dafuer JavaScript
+     braeuchte und du "nur Webstudio-kompatibel" wolltest:
+       - die scrollgesteuerte Drehplatte (14 Einzelbilder)
+       - die taegliche Fahrzeugrotation aus fahrzeuge.json
+       - das aufklappende Menue auf dem Handy
+       - der Video-Abschnitt mit eigener Steuerung
+     Alles andere ist vollstaendig da.
+     ============================================================ -->
+
+<div style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B1116; color: #EDF1F4; line-height: 1.6; -webkit-font-smoothing: antialiased;">
+
+
+  <!-- ==================== KOPF ==================== -->
+  <header style="background-color: #0B1116; border-bottom: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: block; flex-shrink: 0;">
+        <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34" style="display: block; height: 34px; width: auto;">
+      </a>
+
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-left: auto;">
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #D7B147; text-decoration: none; font-size: 15px; font-weight: 600;">Start</a>
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Fahrzeuge</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Performance Experience</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Über uns</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Kontakt</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block;">Rückruf anfordern</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO ==================== -->
+  <section style="position: relative; background-image: linear-gradient(90deg, rgba(11,17,22,0.92) 0%, rgba(11,17,22,0.72) 45%, rgba(11,17,22,0.25) 100%), url('https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/hero-studio.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: clamp(64px, 10vw, 150px) 24px;">
+
+      <p style="margin: 0 0 18px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Exklusive Gebrauchtwagen · Leipzig</p>
+
+      <h1 style="margin: 0; font-size: clamp(46px, 8vw, 92px); line-height: 1.02; font-weight: 800; letter-spacing: -0.02em; color: #EDF1F4; max-width: 16em;">Vertrauen verbindet.<br><span style="color: #D7B147;">Qualität überzeugt.</span></h1>
+
+      <p style="margin: 26px 0 0 0; font-size: clamp(18px, 1.4vw, 21px); line-height: 1.6; color: #A9B6C0; max-width: 34em;">Sportlich, elegant oder außergewöhnlich. Wir führen sorgfältig ausgewählte Fahrzeuge für Menschen mit Anspruch. Verlässlich, diskret und mit Blick fürs Wesentliche.</p>
+
+      <p style="margin: 30px 0 0 0; display: flex; flex-wrap: wrap; gap: 22px; color: #7E8D99; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">
+        <span>Dodge</span><span>Porsche</span><span>Ford</span><span>BMW</span><span>Jeep</span><span>Mercedes-Benz</span><span>Maserati</span>
+      </p>
+
+      <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Alle Fahrzeuge auf mobile.de ↗</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Rückruf anfordern</a>
+      </div>
+
+      <p style="margin: 30px 0 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: #A9B6C0; font-size: 15px;">
+        <span style="color: #D7B147; font-size: 17px; letter-spacing: 2px;">★★★★★</span>
+        <span>4,7 von 5 bei 33 Bewertungen auf mobile.de</span>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== STUDIO ====================
+       Im Original dreht sich hier ein Auto, waehrend man scrollt
+       (14 Einzelbilder, gesteuert per JavaScript). Das geht in
+       Webstudio nicht. Der Abschnitt steht deshalb als fester
+       Bildabschnitt da: dasselbe Standbild, derselbe Text.
+       Wer die Drehung spaeter doch will, braucht dafuer eigenen
+       Code — dann ist es aber kein reines Webstudio mehr. -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Amerika · Leipzig</p>
+
+      <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/drehung/drehung-01.jpg" alt="Ford Mustang GT in Rot auf der Drehplatte im Studio der Rocktrade GmbH" width="1600" height="1067" style="display: block; width: 100%; height: clamp(260px, 40vw, 560px); object-fit: cover; border-radius: 12px;">
+
+      <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px;">
+
+        <div>
+          <h2 style="margin: 0 0 12px 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Amerikanische Autos.</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #A9B6C0;">V8, Kompressor, Ladefläche. Was hier selten auf der Straße steht, steht bei uns in der Halle.</p>
+        </div>
+
+        <div>
+          <h2 style="margin: 0 0 12px 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Deutsche Abwicklung.</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #A9B6C0;">Papiere, TÜV, Zulassung, Gewährleistung. Der Papierkram ist so solide wie bei jedem anderen Händler. Nur die Autos sind lauter.</p>
+        </div>
+
+        <div>
+          <h2 style="margin: 0 0 12px 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Einmal komplett herum.</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #A9B6C0;">So steht jedes Fahrzeug bei uns im Studio: von allen Seiten fotografiert, bevor es online geht. Damit Sie vorher sehen, was Sie bekommen.</p>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 34px;">
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Alle Fahrzeuge ansehen ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== MARKEN ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Was bei uns steht</p>
+      <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4; max-width: 18em;">Hauptsächlich amerikanisch. Nicht ausschließlich.</h2>
+      <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0; max-width: 42em;">Unser Schwerpunkt sind US-Fahrzeuge: Pickups, Muscle Cars, große SUV. Daneben führen wir laufend europäische Sport- und Oberklassewagen. Was gerade dasteht, sehen Sie tagesaktuell auf mobile.de.</p>
+
+      <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=7700%3B13%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/ram.jpg" alt="RAM 1500 Pickup aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">RAM</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Pickup · 1500</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=9000%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/ford.jpg" alt="Ford Mustang GT aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Ford</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Mustang · F-150</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=7700%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/dodge.jpg" alt="Dodge Challenger aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Dodge</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Challenger · Charger · Durango</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=5600%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/chevrolet.jpg" alt="Chevrolet Camaro Cabrio aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Chevrolet</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Camaro · Corvette</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=20100%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/porsche.jpg" alt="Porsche 911 aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Porsche</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">911 · Cayenne</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=17200%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/mercedes.jpg" alt="Mercedes-AMG GT R aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Mercedes-Benz</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">AMG · Oberklasse</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=1900%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/audi.jpg" alt="Audi A6 Avant aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Audi</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">A6 · Q · RS</span>
+          </span>
+        </a>
+
+        <a href="https://home.mobile.de/ROCKTRADEGMBH?vc=Car&amp;ms=16600%3B%3B%3B" target="_blank" rel="noopener" style="position: relative; display: block; text-decoration: none; border-radius: 10px; overflow: hidden; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09);">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/marken/maserati.jpg" alt="Maserati GranCabrio aus dem Bestand der Rocktrade GmbH" width="1000" height="667" style="display: block; width: 100%; height: 210px; object-fit: cover;">
+          <span style="display: block; padding: 16px 18px 18px 18px;">
+            <span style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Maserati</span>
+            <span style="display: block; margin-top: 5px; color: #D7B147; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">GranCabrio · Ghibli</span>
+          </span>
+        </a>
+
+      </div>
+
+      <!-- Rechtshinweis zur Markennennung. Bitte stehen lassen. -->
+      <p style="margin: 36px 0 0 0; font-size: 13px; line-height: 1.7; color: #7E8D99; max-width: 60em;"><b style="color: #A9B6C0;">Hinweis zu den Markennamen:</b> Alle genannten Marken-, Modell- und Typbezeichnungen sind Eigentum der jeweiligen Hersteller. Wir verwenden sie ausschließlich beschreibend, um die von uns angebotenen Fahrzeuge zu bezeichnen (§ 23 MarkenG). Die Rocktrade GmbH ist ein freier Fahrzeughändler und steht in keiner geschäftlichen Verbindung zu den genannten Herstellern. Wir sind weder Vertragshändler noch Vertragswerkstatt und treten nicht in deren Auftrag auf. Abgebildet sind ausschließlich Fahrzeuge aus unserem eigenen Bestand.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== DER HOF ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(48px, 6vw, 88px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/hof.jpg" alt="Der Hof der Rocktrade GmbH in Leipzig, dicht an dicht mit amerikanischen Muscle Cars und Pickups" width="1500" height="1000" style="display: block; width: 100%; height: clamp(240px, 34vw, 460px); object-fit: cover; border-radius: 12px;">
+
+      <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+        <div>
+          <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Der Hof</p>
+          <h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Das ist kein Katalog. Das steht wirklich da.</h2>
+        </div>
+        <div>
+          <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #A9B6C0;">Challenger neben Mustang neben Camaro neben RAM. Wer amerikanische Autos sucht, findet bei uns keine Bestellliste, sondern einen Hof voller Fahrzeuge, die man sofort anfassen und fahren kann.</p>
+          <div style="margin-top: 26px;">
+            <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Vorbeikommen</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== KENNZAHLEN ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(40px, 5vw, 72px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.09); border-bottom: 1px solid rgba(255,255,255,0.09); padding-top: 40px; padding-bottom: 40px;">
+
+        <div>
+          <p style="margin: 0 0 8px 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">Bestand</p>
+          <p style="margin: 0; color: #EDF1F4; font-size: 28px; font-weight: 800; line-height: 1.2;">über 100 <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px; font-weight: 500;">Fahrzeuge</span></p>
+        </div>
+
+        <div>
+          <p style="margin: 0 0 8px 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">Bewertung</p>
+          <p style="margin: 0; color: #EDF1F4; font-size: 28px; font-weight: 800; line-height: 1.2;">4,7 / 5 <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px; font-weight: 500;">auf mobile.de</span></p>
+        </div>
+
+        <div>
+          <p style="margin: 0 0 8px 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">Standort</p>
+          <p style="margin: 0; color: #EDF1F4; font-size: 28px; font-weight: 800; line-height: 1.2;">Leipzig <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px; font-weight: 500;">Ludwig-Hupfeld-Str. 23e</span></p>
+        </div>
+
+        <div>
+          <p style="margin: 0 0 8px 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">Geöffnet</p>
+          <p style="margin: 0; color: #EDF1F4; font-size: 28px; font-weight: 800; line-height: 1.2;">Mo–Sa <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px; font-weight: 500;">Mo–Fr 10–18, Sa 10–13 Uhr</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== EINBLICK / IMAGEFILM ====================
+       AUSFUELLEN: Der Imagefilm existiert noch nicht — es liegt keine
+       Videodatei im Projekt. Der Platz ist reserviert (16:9).
+       Sobald der Film da ist: in Webstudio an dieser Stelle ein
+       Video-Element einsetzen und die Datei als Asset hochladen.
+       Bewusst KEIN YouTube-Einbau — das wuerde Besucherdaten an
+       Google schicken und ein Cookie-Banner noetig machen. -->
+  <section style="background-color: #101A21; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Einblick</p>
+      <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Ein Blick in unseren Showroom</h2>
+      <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0; max-width: 42em;">Wer wir sind, wie wir arbeiten und was uns von einem gewöhnlichen Autohaus unterscheidet. In zwei Minuten.</p>
+
+      <div style="margin-top: 40px; aspect-ratio: 16 / 9; width: 100%; border-radius: 12px; border: 1px dashed rgba(255,255,255,0.28); background-color: #0B1116; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px;">
+        <p style="margin: 0; color: #D7B147; font-size: 40px; line-height: 1;">▷</p>
+        <p style="margin: 0; color: #EDF1F4; font-size: 20px; font-weight: 700; text-align: center;">Hier kommt der Imagefilm hin</p>
+        <p style="margin: 0; color: #7E8D99; font-size: 15px; line-height: 1.6; text-align: center; max-width: 34em;">Platz ist reserviert, 16:9. Sobald die Datei da ist, wird sie direkt eingebunden, ohne YouTube. So kommt die Seite ohne Cookie-Banner aus.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FAHRZEUGE ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Aktueller Bestand</p>
+      <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4; max-width: 18em;">Ein Auszug aus dem, was gerade bei uns steht</h2>
+
+      <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+
+        <!-- Fahrzeug 1 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/14-dodge-durango.jpg" alt="Dodge Durango SRT Hellcat in Grau im Showroom der Rocktrade GmbH" width="1400" height="934" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Dodge Durango</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">6.2 V8 4x4 HELLCAT SuperCharged Premium</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>529 kW / 719 PS</span><span>17.230 km</span><span>1. Hand</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">76.990 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis, 19 % MwSt. ausweisbar</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=459095031" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 2 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/36-porsche-992.jpg" alt="Porsche 911 Carrera 4S in Orange mit TECHART-Paket" width="1400" height="933" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Porsche 992</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">911 Carrera 4 S TECHART AKRAPOVIC, 111-Punkte-Check</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>331 kW / 450 PS</span><span>46.550 km</span><span>Sport Chrono+</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">109.990 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=441040105" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 3 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/15-dodge-challenger.jpg" alt="Dodge Challenger SRT 392 Scat Pack im Showroom" width="1400" height="934" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Dodge Challenger</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">6.4 V8 SRT 392 R/T Scat Pack, deutsche Zulassung</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>362 kW / 492 PS</span><span>98.980 km</span><span>Performance Pack</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">29.990 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=459205982" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 4 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/02-dodge-ram.jpg" alt="Dodge RAM Laramie Night mit Panoramadach" width="1400" height="934" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Dodge RAM</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">3.0 Twin Turbo Laramie Night, Modell 2025</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>309 kW / 420 PS</span><span>26.240 km</span><span>Night-Paket</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">56.990 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=453521917" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 5 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/42-maserati-grancabrio.jpg" alt="Maserati GranCabrio Sport mit V8-Motor" width="1400" height="933" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Maserati GranCabrio</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">Sport 4.7 V8, unfallfrei, BOSE</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>323 kW / 439 PS</span><span>139.565 km</span><span>TÜV neu</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">36.990 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=449085341" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 6 -->
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/16-ford-mustang.jpg" alt="Ford Mustang GT mit 5.0 V8 im Showroom" width="1400" height="934" style="display: block; width: 100%; height: 230px; object-fit: cover;">
+          <div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 22px; font-weight: 700;">Ford Mustang</h3>
+            <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.5;">Shelby GT 500 5.0 V8 Premium Performance</p>
+            <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 14px; color: #7E8D99; font-size: 13px; font-weight: 600;"><span>343 kW / 466 PS</span><span>42.115 km</span><span>TÜV + Service neu</span></p>
+            <p style="margin: 14px 0 0 0; color: #D7B147; font-size: 26px; font-weight: 800;">36.900 € <span style="display: block; margin-top: 4px; color: #7E8D99; font-size: 12px; font-weight: 500;">Bruttopreis</span></p>
+            <a href="https://suchen.mobile.de/fahrzeuge/details.html?id=459206958" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 16px; color: #58BEDC; text-decoration: none; font-size: 15px; font-weight: 700;">Zum Inserat auf mobile.de ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="margin-top: 44px; background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; align-items: center;">
+        <div>
+          <h3 style="margin: 0 0 10px 0; color: #EDF1F4; font-size: 24px; font-weight: 700;">Der komplette Bestand liegt auf mobile.de</h3>
+          <p style="margin: 0; color: #A9B6C0; font-size: 16px; line-height: 1.6;">Dort ist alles tagesaktuell: jedes Fahrzeug mit Fotogalerie, technischen Daten, Ausstattungsliste und Preis. Was hier steht, ist nur ein Ausschnitt.</p>
+        </div>
+        <div>
+          <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Alle Fahrzeuge ansehen ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== PERFORMANCE EXPERIENCE ==================== -->
+  <section style="background-color: #006180; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px; align-items: center;">
+
+        <div>
+          <p style="margin: 0 0 14px 0; color: #E5C46A; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Performance Experience</p>
+          <h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #FFFFFF;">Erst fahren. Dann reden.</h2>
+          <p style="margin: 22px 0 0 0; font-size: 19px; line-height: 1.65; color: rgba(255,255,255,0.88); max-width: 34em;">Eine Probefahrt über zehn Minuten sagt wenig über ein Auto mit 700 PS. Deshalb gibt es bei uns die erweiterte Probefahrt: Sie suchen sich ein Fahrzeug aus, wir nehmen uns Zeit, und Sie erleben es richtig.</p>
+          <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px;">
+            <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Fahrzeug auswählen</a>
+            <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html#ablauf" style="background-color: transparent; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.45); display: inline-block;">Wie es abläuft</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/28-dodge-challenger.jpg" alt="Dodge Challenger im Showroom der Rocktrade GmbH" width="1400" height="933" style="display: block; width: 100%; height: auto; border-radius: 12px;">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== LEISTUNGEN ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Was wir machen</p>
+      <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Vom ersten Blick bis zur Übergabe</h2>
+
+      <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 28px;">
+          <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 30px; line-height: 1;">▤</p>
+          <h3 style="margin: 0 0 10px 0; color: #EDF1F4; font-size: 20px; font-weight: 700;">Verkauf</h3>
+          <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.65;">Ausgewählte Gebrauchtwagen, geprüft und mit offener Historie. Was wir über ein Fahrzeug wissen, erfahren Sie auch.</p>
+        </article>
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 28px;">
+          <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 30px; line-height: 1;">◎</p>
+          <h3 style="margin: 0 0 10px 0; color: #EDF1F4; font-size: 20px; font-weight: 700;">Ankauf</h3>
+          <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.65;">Sie wollen Ihr Fahrzeug abgeben? Wir schauen es uns an und machen Ihnen ein Angebot, ohne langes Hin und Her.</p>
+        </article>
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 28px;">
+          <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 30px; line-height: 1;">⚙</p>
+          <h3 style="margin: 0 0 10px 0; color: #EDF1F4; font-size: 20px; font-weight: 700;">Werkstatt</h3>
+          <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.65;">Service, TÜV und Reparatur im eigenen Haus. Viele unserer Fahrzeuge gehen mit frischem TÜV und neuem Service raus.</p>
+        </article>
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 28px;">
+          <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 30px; line-height: 1;">▷</p>
+          <h3 style="margin: 0 0 10px 0; color: #EDF1F4; font-size: 20px; font-weight: 700;">Lieferung</h3>
+          <p style="margin: 0; color: #A9B6C0; font-size: 15px; line-height: 1.65;">Auf Wunsch bringen wir das Fahrzeug zu Ihnen. Deutschlandweit, auf Termin und im vereinbarten Zustand.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ÜBER UNS ==================== -->
+  <section style="background-color: #101A21; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px; align-items: center;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/00-rocktrade-innenraum.jpg" alt="Innenraum eines Fahrzeugs aus dem Bestand der Rocktrade GmbH" width="1400" height="788" style="display: block; width: 100%; height: auto; border-radius: 12px;">
+        </div>
+
+        <div>
+          <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Über uns</p>
+          <h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Ein junges Team, das Autos ernst nimmt</h2>
+          <p style="margin: 22px 0 0 0; font-size: 19px; line-height: 1.65; color: #A9B6C0;">Wir sind ein Fahrzeughandel in Leipzig mit einem Faible für amerikanische Autos, starke Motoren und saubere Technik. Was uns wichtig ist: Sie sollen nach dem Kauf genauso zufrieden sein wie währenddessen.</p>
+
+          <ul style="margin: 26px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Jedes Fahrzeug wird vor dem Verkauf geprüft</span></li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Wir sagen auch, was gegen ein Auto spricht</span></li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Beratung ohne Druck, auch wenn es länger dauert</span></li>
+          </ul>
+
+          <div style="margin-top: 30px;">
+            <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Mehr über uns</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BEWERTUNGEN ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Kundenmeinungen</p>
+      <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Was unsere Kunden sagen</h2>
+      <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0; max-width: 42em;">Wir sammeln keine Bewertungen auf der eigenen Seite, wo wir uns die schönsten heraussuchen könnten. Sie stehen dort, wo jeder sie nachlesen kann und wir sie nicht löschen können.</p>
+
+      <!-- AUSFUELLEN: Noten geprueft am 16.08.2026. Vor dem Livegang beide
+           Seiten aufrufen und die Werte hier angleichen. Vier Stellen je Karte:
+           Zahl, Sterne, Anzahl, Stand-Zeile. -->
+      <div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 30px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; background-color: #16222B; color: #D7B147; font-size: 20px; font-weight: 800;">G</span>
+            <div>
+              <h3 style="margin: 0; color: #EDF1F4; font-size: 19px; font-weight: 700;">Google</h3>
+              <p style="margin: 2px 0 0 0; color: #7E8D99; font-size: 13px;">Rezensionen bei Google Maps</p>
+            </div>
+          </div>
+          <p style="margin: 24px 0 0 0; color: #EDF1F4; font-size: 44px; font-weight: 800; line-height: 1;">4,6 <span style="color: #7E8D99; font-size: 16px; font-weight: 500;">von 5</span></p>
+          <p style="margin: 10px 0 0 0; color: #D7B147; font-size: 20px; letter-spacing: 2px;">★★★★<span style="opacity: 0.45;">★</span></p>
+          <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 14px;">aus 10 Rezensionen</p>
+          <div style="margin-top: 22px;">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=RockTrade+GmbH+Ludwig-Hupfeld-Stra%C3%9Fe+23e+04178+Leipzig" target="_blank" rel="noopener" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 14px 24px; border-radius: 6px; display: inline-block;">Alle Rezensionen lesen ↗</a>
+          </div>
+          <p style="margin: 16px 0 0 0; color: #7E8D99; font-size: 12px;">Stand: 16.08.2026</p>
+        </article>
+
+        <article style="background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 30px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; height: 44px; border-radius: 8px; background-color: #16222B; color: #58BEDC; font-size: 14px; font-weight: 800;">mobile</span>
+            <div>
+              <h3 style="margin: 0; color: #EDF1F4; font-size: 19px; font-weight: 700;">mobile.de</h3>
+              <p style="margin: 2px 0 0 0; color: #7E8D99; font-size: 13px;">Händlerbewertungen nach dem Kauf</p>
+            </div>
+          </div>
+          <p style="margin: 24px 0 0 0; color: #EDF1F4; font-size: 44px; font-weight: 800; line-height: 1;">4,7 <span style="color: #7E8D99; font-size: 16px; font-weight: 500;">von 5</span></p>
+          <p style="margin: 10px 0 0 0; color: #D7B147; font-size: 20px; letter-spacing: 2px;">★★★★<span style="opacity: 0.45;">★</span></p>
+          <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 14px;">aus 33 Bewertungen</p>
+          <div style="margin-top: 22px;">
+            <a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 700; padding: 14px 24px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Alle Bewertungen lesen ↗</a>
+          </div>
+          <p style="margin: 16px 0 0 0; color: #7E8D99; font-size: 12px;">Stand: 16.08.2026</p>
+        </article>
+
+      </div>
+
+      <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
+        <div style="border-left: 2px solid #D7B147; padding-left: 16px;">
+          <b style="display: block; color: #EDF1F4; font-size: 16px;">Junges, freundliches Team</b>
+          <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px;">wird in den Bewertungen am häufigsten genannt</span>
+        </div>
+        <div style="border-left: 2px solid #D7B147; padding-left: 16px;">
+          <b style="display: block; color: #EDF1F4; font-size: 16px;">Transparente Beratung</b>
+          <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px;">ehrlich und unkompliziert, ohne Verkaufsdruck</span>
+        </div>
+        <div style="border-left: 2px solid #D7B147; padding-left: 16px;">
+          <b style="display: block; color: #EDF1F4; font-size: 16px;">Erfahrung mit US-Fahrzeugen</b>
+          <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px;">Dodge, Ford, Chevrolet, Jeep</span>
+        </div>
+        <div style="border-left: 2px solid #D7B147; padding-left: 16px;">
+          <b style="display: block; color: #EDF1F4; font-size: 16px;">Saubere Abwicklung</b>
+          <span style="display: block; margin-top: 4px; color: #A9B6C0; font-size: 14px;">vom ersten Kontakt bis zur Übergabe</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== KONTAKT ==================== -->
+  <section style="background-color: #101A21; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px; align-items: start;">
+
+        <div>
+          <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Kontakt</p>
+          <h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Rufen Sie an oder schreiben Sie kurz</h2>
+          <p style="margin: 22px 0 0 0; font-size: 19px; line-height: 1.65; color: #A9B6C0;">Sie haben ein Fahrzeug im Blick oder wollen Ihres verkaufen? Ein Anruf ist oft schneller als drei Mails.</p>
+          <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px;">
+            <a href="tel:+4934122802620" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">0341 22802620</a>
+            <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Zum Kontaktformular</a>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 22px;">
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="color: #D7B147; font-size: 20px; line-height: 1.3;">⌖</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Adresse</p>
+              <p style="margin: 4px 0 0 0; color: #EDF1F4; font-size: 17px; font-weight: 600;">Ludwig-Hupfeld-Straße 23e</p>
+              <p style="margin: 2px 0 0 0; color: #A9B6C0; font-size: 15px;">04178 Leipzig</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="color: #D7B147; font-size: 20px; line-height: 1.3;">☎</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Telefon</p>
+              <p style="margin: 4px 0 0 0;"><a href="tel:+4934122802620" style="color: #EDF1F4; font-size: 17px; font-weight: 600; text-decoration: none;">0341 22802620</a></p>
+              <p style="margin: 2px 0 0 0;"><a href="tel:+4917623268022" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0176 23268022</a></p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="color: #D7B147; font-size: 20px; line-height: 1.3;">✉</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">E-Mail</p>
+              <p style="margin: 4px 0 0 0;"><a href="mailto:kontakt@rocktrade.de" style="color: #EDF1F4; font-size: 17px; font-weight: 600; text-decoration: none;">kontakt@rocktrade.de</a></p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="color: #D7B147; font-size: 20px; line-height: 1.3;">◷</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Öffnungszeiten</p>
+              <p style="margin: 4px 0 0 0; color: #EDF1F4; font-size: 17px; font-weight: 600;">Mo–Fr 10–18 Uhr</p>
+              <p style="margin: 2px 0 0 0; color: #A9B6C0; font-size: 15px;">Sa 10–13 Uhr</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FUSS ==================== -->
+  <footer style="background-color: #0B1116; border-top: 1px solid rgba(255,255,255,0.09); padding: clamp(48px, 6vw, 80px) 0 32px 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38" style="display: block; height: 38px; width: auto;">
+          <p style="margin: 18px 0 0 0; color: #A9B6C0; font-size: 15px; line-height: 1.65; max-width: 24em;">Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen. Geprüft, transparent und persönlich beraten.</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Seiten</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Startseite</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Performance Experience</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Über uns</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Fahrzeuge</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bestand auf mobile.de</a></li>
+            <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bewertungen</a></li>
+            <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Kontakt</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="tel:+4934122802620" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0341 22802620</a></li>
+            <li><a href="mailto:kontakt@rocktrade.de" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">kontakt@rocktrade.de</a></li>
+            <li style="color: #A9B6C0; font-size: 15px;">Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">© 2026 Rocktrade GmbH</p>
+        <nav style="display: flex; gap: 20px;">
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/impressum.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Impressum</a>
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Datenschutz</a>
+        </nav>
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>

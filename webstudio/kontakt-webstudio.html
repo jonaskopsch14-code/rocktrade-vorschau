@@ -1,0 +1,257 @@
+<!-- ============================================================
+     ROCKTRADE GmbH — Seite KONTAKT, Fassung fuer WEBSTUDIO
+     ------------------------------------------------------------
+     Quelle: seite/kontakt.html
+     Kopf, Fuss, Knopf-Stile, Abstaende und Farben sind 1:1 aus
+     startseite-webstudio.html uebernommen, damit alle Seiten
+     zusammenpassen.
+
+     Diese Datei ist bewusst anders gebaut als die Originalseite:
+
+       * Alle Gestaltung steht INLINE an jedem Element.
+         Webstudio uebernimmt beim Einfuegen nur Inline-Styles,
+         ein <style>-Block oder eine CSS-Datei wuerde verpuffen.
+       * Keine CSS-Variablen, keine @media-Abfragen, keine :hover
+         und kein :focus. Das laesst sich inline nicht ausdruecken.
+         Die Seite bleibt trotzdem responsiv: ueber clamp() und
+         Grids mit auto-fit sowie flex-wrap.
+       * Kein <script>, kein <style>, kein <form action="...php">.
+       * Keine SVG-Icons. Webstudio wirft SVG beim Einfuegen haeufig
+         weg, deshalb stehen dort Textzeichen (aus dem Zeichensatz).
+       * Alle Bilder und alle internen Links liegen als ABSOLUTE URL
+         vor und sind sofort erreichbar. In Webstudio spaeter einfach
+         durch eigene Uploads bzw. eigene Seiten ersetzen.
+
+     So kommt es hinein:
+       1. Diese Datei im Editor oeffnen, alles markieren, kopieren.
+       2. In Webstudio auf die Leinwand klicken und einfuegen.
+          Webstudio wandelt das in eigene Bausteine um.
+
+     Was hier gegenueber dem Original BEWUSST FEHLT, weil Webstudio
+     dafuer JavaScript bzw. eigene Serverlogik braucht:
+       - das action/method des Formulars (kontakt.php). Die Felder
+         sind vollstaendig da, die Absendelogik haengt Webstudio
+         selbst an. Es wurde KEIN Absende-Code erfunden.
+       - die versteckte Spamfalle (Honigtopf). Sie funktioniert nur
+         zusammen mit der Serverauswertung in kontakt.php.
+       - das aufklappende Menue auf dem Handy (Burger-Knopf)
+       - der Sprunglink "Zum Inhalt springen"
+       - die Einblend-Animation der Bloecke beim Scrollen
+       - die automatische Jahreszahl im Fuss (steht fest als 2026)
+     Alle sichtbaren Inhalte und alle Formularfelder sind da.
+     ============================================================ -->
+
+<div style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B1116; color: #EDF1F4; line-height: 1.6; -webkit-font-smoothing: antialiased;">
+
+
+  <!-- ==================== KOPF ==================== -->
+  <header style="background-color: #0B1116; border-bottom: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: block; flex-shrink: 0;">
+        <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34" style="display: block; height: 34px; width: auto;">
+      </a>
+
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-left: auto;">
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Start</a>
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Fahrzeuge</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Performance Experience</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Über uns</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #D7B147; text-decoration: none; font-size: 15px; font-weight: 600;">Kontakt</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block;">Rückruf anfordern</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== KONTAKT ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="max-width: 46rem; margin-bottom: clamp(32px, 4vw, 60px);">
+        <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Kontakt</p>
+        <h2 style="margin: 0; font-size: clamp(2.5rem, 1.875rem + 2.778vw, 4.25rem); line-height: 1.14; font-weight: 800; letter-spacing: -0.02em; color: #EDF1F4;">Schreiben Sie uns, oder rufen Sie einfach an</h2>
+        <p style="margin: 20px 0 0 0; font-size: clamp(18px, 1.4vw, 21px); line-height: 1.65; color: #A9B6C0;">Ein Anruf ist meistens schneller als drei Mails. Wenn es Ihnen lieber schriftlich ist, nutzen Sie das Formular. Wir melden uns innerhalb eines Werktags.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start;">
+
+
+        <!-- ---------- Formular ---------- -->
+        <!-- Ohne action und ohne method. Webstudio haengt seine eigene
+             Formular-Logik an. Die Spamfalle aus dem Original fehlt,
+             weil sie ohne Serverauswertung nichts bringt. -->
+        <form style="display: grid; gap: 24px; padding: clamp(24px, 3vw, 40px); background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 18px;">
+
+          <div style="display: grid; gap: 8px;">
+            <label for="anliegen" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">Worum geht es? <span style="color: #D7B147;">*</span></label>
+            <select id="anliegen" name="anliegen" required style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit;">
+              <option value="">Bitte auswählen</option>
+              <option>Frage zu einem Fahrzeug</option>
+              <option>Rückruf gewünscht</option>
+              <option>Ich möchte mein Fahrzeug verkaufen</option>
+              <option>Performance Experience</option>
+              <option>Werkstatt und Service</option>
+              <option>Etwas anderes</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+
+            <div style="display: grid; gap: 8px;">
+              <label for="name" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">Name <span style="color: #D7B147;">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit;">
+            </div>
+
+            <div style="display: grid; gap: 8px;">
+              <label for="telefon" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" autocomplete="tel" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit;">
+              <span style="font-size: 13px; color: #7E8D99;">Nur nötig, wenn Sie einen Rückruf möchten.</span>
+            </div>
+
+          </div>
+
+          <div style="display: grid; gap: 8px;">
+            <label for="email" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">E-Mail <span style="color: #D7B147;">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit;">
+          </div>
+
+          <div style="display: grid; gap: 8px;">
+            <label for="fahrzeug" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">Um welches Fahrzeug geht es?</label>
+            <input type="text" id="fahrzeug" name="fahrzeug" placeholder="z. B. Dodge Challenger SRT 392" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit;">
+          </div>
+
+          <div style="display: grid; gap: 8px;">
+            <label for="nachricht" style="font-size: 15px; font-weight: 500; color: #EDF1F4;">Ihre Nachricht <span style="color: #D7B147;">*</span></label>
+            <textarea id="nachricht" name="nachricht" required placeholder="Zwei, drei Sätze reichen." style="width: 100%; min-height: 150px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 15px; font-family: inherit; line-height: 1.5; resize: vertical;"></textarea>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start;">
+            <input type="checkbox" id="einwilligung" name="einwilligung" required style="width: 22px; height: 22px; accent-color: #D7B147; margin-top: 3px;">
+            <label for="einwilligung" style="font-size: 15px; line-height: 1.6; color: #A9B6C0;">Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. <span style="color: #D7B147;">*</span> Mehr dazu im <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #D7B147;">Datenschutz</a>.</label>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+            <button type="submit" style="background-color: #D7B147; color: #0B1116; border: none; border-radius: 6px; padding: 16px 28px; min-width: 224px; font-size: 16px; font-weight: 700; font-family: inherit; line-height: 1.2; cursor: pointer;">Nachricht senden</button>
+            <p style="margin: 0; font-size: 13px; color: #7E8D99;">Ihre Daten gehen direkt an uns, sonst nirgendwohin.</p>
+          </div>
+
+        </form>
+
+
+        <!-- ---------- Daten daneben ---------- -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: rgba(0,97,128,0.3); border: 1px solid rgba(88,190,220,0.28); color: #58BEDC; font-size: 20px; line-height: 1;">⌖</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Adresse</p>
+              <p style="margin: 4px 0 0 0; color: #EDF1F4; font-size: 18px; font-weight: 600;">Ludwig-Hupfeld-Straße 23e</p>
+              <p style="margin: 2px 0 0 0; color: #A9B6C0; font-size: 15px;">04178 Leipzig</p>
+              <p style="margin: 10px 0 0 0;"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ludwig-Hupfeld-Stra%C3%9Fe+23e+04178+Leipzig" target="_blank" rel="noopener" style="color: #D7B147; font-size: 15px; font-weight: 600; text-decoration: none;">Route planen ↗</a></p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: rgba(0,97,128,0.3); border: 1px solid rgba(88,190,220,0.28); color: #58BEDC; font-size: 20px; line-height: 1;">☎</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Telefon</p>
+              <p style="margin: 4px 0 0 0;"><a href="tel:+4934122802620" style="color: #EDF1F4; font-size: 18px; font-weight: 600; text-decoration: none;">0341 22802620</a></p>
+              <p style="margin: 2px 0 0 0;"><a href="tel:+4917623268022" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0176 23268022</a></p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: rgba(0,97,128,0.3); border: 1px solid rgba(88,190,220,0.28); color: #58BEDC; font-size: 20px; line-height: 1;">✉</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">E-Mail</p>
+              <p style="margin: 4px 0 0 0;"><a href="mailto:kontakt@rocktrade.de" style="color: #EDF1F4; font-size: 18px; font-weight: 600; text-decoration: none;">kontakt@rocktrade.de</a></p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: rgba(0,97,128,0.3); border: 1px solid rgba(88,190,220,0.28); color: #58BEDC; font-size: 20px; line-height: 1;">◷</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Öffnungszeiten</p>
+              <p style="margin: 4px 0 0 0; color: #EDF1F4; font-size: 18px; font-weight: 600;">Montag bis Freitag 10-18 Uhr</p>
+              <p style="margin: 2px 0 0 0; color: #A9B6C0; font-size: 15px;">Samstag 10-13 Uhr</p>
+              <p style="margin: 2px 0 0 0; color: #A9B6C0; font-size: 15px;">Sonntag geschlossen</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: rgba(0,97,128,0.3); border: 1px solid rgba(88,190,220,0.28); color: #58BEDC; font-size: 20px; line-height: 1;">◎</span>
+            <div>
+              <p style="margin: 0; color: #7E8D99; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Sonst</p>
+              <p style="margin: 4px 0 0 0;"><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; font-size: 18px; font-weight: 600; text-decoration: none;">Bestand auf mobile.de</a></p>
+              <p style="margin: 2px 0 0 0;"><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram @rocktrade_gmbh</a></p>
+            </div>
+          </div>
+
+          <!-- Bewusst keine eingebettete Karte: Google Maps im iframe wuerde
+               Besucherdaten an Google schicken und ein Cookie-Banner noetig
+               machen. Der Link oben oeffnet die Route erst nach einem Klick. -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FUSS ==================== -->
+  <footer style="background-color: #0B1116; border-top: 1px solid rgba(255,255,255,0.09); padding: clamp(48px, 6vw, 80px) 0 32px 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38" style="display: block; height: 38px; width: auto;">
+          <p style="margin: 18px 0 0 0; color: #A9B6C0; font-size: 15px; line-height: 1.65; max-width: 24em;">Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen. Geprüft, transparent und persönlich beraten.</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Seiten</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Startseite</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Performance Experience</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Über uns</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Fahrzeuge</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bestand auf mobile.de</a></li>
+            <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bewertungen</a></li>
+            <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Kontakt</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="tel:+4934122802620" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0341 22802620</a></li>
+            <li><a href="mailto:kontakt@rocktrade.de" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">kontakt@rocktrade.de</a></li>
+            <li style="color: #A9B6C0; font-size: 15px;">Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">© 2026 Rocktrade GmbH</p>
+        <nav style="display: flex; gap: 20px;">
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/impressum.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Impressum</a>
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Datenschutz</a>
+        </nav>
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>

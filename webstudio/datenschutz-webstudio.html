@@ -1,0 +1,229 @@
+<!-- ============================================================
+     ROCKTRADE GmbH — Datenschutz, Fassung fuer WEBSTUDIO
+     ------------------------------------------------------------
+     Quelle: seite/datenschutz.html
+     Diese Datei ist bewusst anders gebaut als die Originalseite:
+
+       * Alle Gestaltung steht INLINE an jedem Element.
+         Webstudio uebernimmt beim Einfuegen nur Inline-Styles,
+         ein <style>-Block oder eine CSS-Datei wuerde verpuffen.
+       * Keine CSS-Variablen, keine @media-Abfragen, keine :hover.
+         Das laesst sich inline nicht ausdruecken. Die Seite bleibt
+         trotzdem responsiv: ueber clamp() und Grids mit auto-fit.
+       * Kein <script>, kein <style>, keine id-Attribute.
+       * Keine SVG-Icons. Webstudio wirft SVG beim Einfuegen haeufig
+         weg, deshalb stehen dort Textzeichen (aus dem Zeichensatz).
+       * Kopf und Fuss sind 1:1 aus startseite-webstudio.html
+         uebernommen, damit alle Seiten zusammenpassen.
+
+     So kommt es hinein:
+       1. Diese Datei im Editor oeffnen, alles markieren, kopieren.
+       2. In Webstudio auf die Leinwand klicken und einfuegen.
+
+     Was hier BEWUSST FEHLT, weil Webstudio dafuer JavaScript
+     braeuchte:
+       - der Sprunglink "Zum Inhalt springen" (braucht Ziel-id)
+       - das aufklappende Menue auf dem Handy (Burger-Knopf)
+       - die automatische Jahreszahl im Fuss (steht jetzt fest
+         als 2026 im Text, so wie in der Musterdatei)
+     Der komplette Rechtstext ist WORTGETREU uebernommen,
+     einschliesslich aller Platzhalter.
+     ============================================================ -->
+
+<!-- WARNUNG (fuer Rocktrade, nicht fuer Besucher):
+     Dieser Text stimmt nur, solange die Seite wirklich nichts von fremden Servern laedt.
+     Sobald ein YouTube-Video, eine Google-Maps-Karte, ein Analyse-Werkzeug, eine externe
+     Schrift oder ein Formulardienst dazukommt, ist er falsch und muss ueberarbeitet werden.
+     Das hier ist keine Rechtsberatung. Vor dem Livegang bitte von jemandem pruefen lassen,
+     der das darf.
+     ACHTUNG bei Webstudio: Webstudio bindet je nach Einstellung eigene Schriften oder
+     Skripte von fremden Servern ein. Dann ist Abschnitt 2 nicht mehr richtig. -->
+
+<div style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B1116; color: #EDF1F4; line-height: 1.6; -webkit-font-smoothing: antialiased;">
+
+
+  <!-- ==================== KOPF ==================== -->
+  <header style="background-color: #0B1116; border-bottom: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: block; flex-shrink: 0;">
+        <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34" style="display: block; height: 34px; width: auto;">
+      </a>
+
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-left: auto;">
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #D7B147; text-decoration: none; font-size: 15px; font-weight: 600;">Start</a>
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Fahrzeuge</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Performance Experience</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Über uns</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Kontakt</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block;">Rückruf anfordern</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== RECHTSTEXT ==================== -->
+  <main style="max-width: 704px; margin-left: auto; margin-right: auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 40px) clamp(48px, 7vw, 80px) clamp(20px, 5vw, 40px);">
+
+    <h1 style="margin: 0; font-size: clamp(40px, 5.5vw, 68px); line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; color: #EDF1F4;">Datenschutz</h1>
+
+    <!-- AUSFUELLEN: Das Datum ist ein Platzhalter (im Original als
+         Platzhalter-Marke ausgezeichnet). Vor dem Livegang auf den
+         tatsaechlichen Stand setzen. -->
+    <p style="margin: 20px 0 0 0; color: #7E8D99; font-size: clamp(15px, 1.1vw, 16px);">Stand: <span style="background-color: #2A1F0C; color: #D7B147; border: 1px solid rgba(215,177,71,0.4); border-radius: 3px; padding: 0.05em 0.35em; font-family: ui-monospace, Consolas, 'Courier New', monospace; font-size: 0.86em;">17. August 2026</span></p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">1. Verantwortlicher</h2>
+
+    <address style="font-style: normal; margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">
+      Rocktrade GmbH<br>
+      Ludwig-Hupfeld-Straße 23e<br>
+      04178 Leipzig<br>
+      Geschäftsführer: Philipp Halbrock<br>
+      <a href="mailto:kontakt@rocktrade.de" style="color: #D7B147; text-underline-offset: 3px;">kontakt@rocktrade.de</a><br>
+      <a href="tel:+4934122802620" style="color: #D7B147; text-underline-offset: 3px;">+49 341 22802620</a>
+    </address>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">2. Was diese Seite nicht tut</h2>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Diese Website setzt keine Cookies, lädt keine Inhalte von fremden Servern, bindet keine externen Schriften, Karten, Videos oder Social-Media-Widgets ein, nutzt keine Analyse- oder Trackingdienste und überträgt keine Daten in Drittländer. Es findet keine automatisierte Entscheidungsfindung und kein Profiling nach Art. 22 DSGVO statt. Im Browser wird nichts gespeichert, weder Cookies noch localStorage.</p>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Links zu mobile.de, Instagram oder Google Maps sind einfache Textlinks. Daten fließen dorthin erst, wenn Sie einen dieser Links anklicken.</p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">3. Hosting und Server-Logdateien</h2>
+
+    <!-- AUSFUELLEN: Hoster-Name und Hoster-Anschrift sind im Original als
+         Platzhalter ausgezeichnet. Vor dem Livegang gegen den tatsaechlichen
+         Vertragspartner pruefen. -->
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Beim Aufruf protokolliert unser Hoster <span style="background-color: #2A1F0C; color: #D7B147; border: 1px solid rgba(215,177,71,0.4); border-radius: 3px; padding: 0.05em 0.35em; font-family: ui-monospace, Consolas, 'Courier New', monospace; font-size: 0.86em;">ALL-INKL.COM – Neue Medien Münnich GmbH</span>, <span style="background-color: #2A1F0C; color: #D7B147; border: 1px solid rgba(215,177,71,0.4); border-radius: 3px; padding: 0.05em 0.35em; font-family: ui-monospace, Consolas, 'Courier New', monospace; font-size: 0.86em;">Hauptstraße 68, 02742 Friedersdorf</span>, technisch notwendige Zugriffsdaten: IP-Adresse, Datum und Uhrzeit, angeforderte Datei, HTTP-Statuscode, übertragene Datenmenge, Referrer sowie Browser- und Betriebssystemkennung.</p>
+
+    <!-- AUSFUELLEN: Die Loeschfrist ist im Original ein Platzhalter. Der Text
+         lautet dort woertlich "nach nach sieben Tagen" (Wortdopplung aus der
+         Quelle, hier unveraendert uebernommen). Vor dem Livegang Frist und
+         Wortlaut korrigieren. -->
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Zweck ist der technische Betrieb, die Stabilität und Sicherheit der Website, die Abwehr von Angriffen und die Fehleranalyse. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse besteht darin, die Seite ausfallsicher bereitzustellen und Missbrauch zu erkennen. Die Daten werden nach <span style="background-color: #2A1F0C; color: #D7B147; border: 1px solid rgba(215,177,71,0.4); border-radius: 3px; padding: 0.05em 0.35em; font-family: ui-monospace, Consolas, 'Courier New', monospace; font-size: 0.86em;">nach sieben Tagen</span> automatisch gelöscht und nicht mit anderen Datenquellen zusammengeführt. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">4. Kontaktformular und Terminanfrage</h2>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Wenn Sie das Kontaktformular oder die Anfrage für eine Performance Experience nutzen, verarbeiten wir die von Ihnen eingegebenen Angaben: Name, E-Mail-Adresse, Telefonnummer, gewähltes Fahrzeug, Wunschtermin und Ihre Nachricht. Wir verwenden sie ausschließlich, um Ihre Anfrage zu beantworten.</p>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage der Anbahnung eines Vertrags dient, im Übrigen Art. 6 Abs. 1 lit. f DSGVO sowie Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, die Sie jederzeit mit Wirkung für die Zukunft widerrufen können.</p>
+
+    <!-- AUSFUELLEN: E-Mail-Anbieter ist im Original ein Platzhalter.
+         ACHTUNG: Der Satz "Die Formulare werden auf unserem eigenen Server
+         verarbeitet ... Es ist kein externer Formulardienst eingebunden."
+         stimmt nicht mehr, sobald Webstudio seine eigene Formular-Logik
+         uebernimmt. Vor dem Livegang neu formulieren lassen. -->
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Die Formulare werden auf unserem eigenen Server verarbeitet und als E-Mail an uns zugestellt. Es ist kein externer Formulardienst eingebunden. Unsere E-Mails laufen über <span style="background-color: #2A1F0C; color: #D7B147; border: 1px solid rgba(215,177,71,0.4); border-radius: 3px; padding: 0.05em 0.35em; font-family: ui-monospace, Consolas, 'Courier New', monospace; font-size: 0.86em;">ALL-INKL.COM – Neue Medien Münnich GmbH</span>; dieser Anbieter ist damit ebenfalls Empfänger. Wir löschen Ihre Nachricht, sobald die Anfrage erledigt ist und keine handels- oder steuerrechtlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Die Angabe der Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne sie können wir Ihre Anfrage allerdings nicht beantworten.</p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">5. Empfänger</h2>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Ausschließlich der genannte Hoster und der genannte E-Mail-Anbieter. Keine Weitergabe an Werbenetzwerke, Analyseanbieter oder sonstige Dritte.</p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">6. Verschlüsselung</h2>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Die Verbindung zu dieser Website ist per TLS verschlüsselt (Art. 32 DSGVO).</p>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">7. Ihre Rechte</h2>
+
+    <ul style="margin: 16px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px;">
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Auskunft (Art. 15 DSGVO)</span></li>
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Berichtigung (Art. 16 DSGVO)</span></li>
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Löschung (Art. 17 DSGVO)</span></li>
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Einschränkung der Verarbeitung (Art. 18 DSGVO)</span></li>
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Datenübertragbarkeit (Art. 20 DSGVO)</span></li>
+      <li style="display: flex; gap: 10px; align-items: flex-start; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;"><span style="color: #D7B147;">—</span><span>Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</span></li>
+    </ul>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Eine formlose Nachricht an <a href="mailto:kontakt@rocktrade.de" style="color: #D7B147; text-underline-offset: 3px;">kontakt@rocktrade.de</a> genügt.</p>
+
+
+    <!-- Hervorgehobener Kasten (im Original: .hervor) -->
+    <div style="margin-top: 24px; border: 1px solid rgba(255,255,255,0.17); border-radius: 10px; padding: 32px; background-color: #101A21;">
+
+      <h2 style="margin: 0 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">8. Widerspruchsrecht</h2>
+
+      <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen, die auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt. Wir verarbeiten die Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen.</p>
+
+    </div>
+
+
+    <h2 style="margin: 64px 0 16px 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 600; color: #EDF1F4;">9. Beschwerderecht</h2>
+
+    <p style="margin: 16px 0 0 0; color: #A9B6C0; font-size: clamp(16px, 1.25vw, 18px); line-height: 1.65;">Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns zuständig ist die Sächsische Datenschutz- und Transparenzbeauftragte, Devrientstraße 5, 01067 Dresden.</p>
+
+    <!-- AUSFUELLEN: Zustaendig ist die Behoerde am Sitz des Unternehmens. Leipzig liegt in
+         Sachsen, deshalb Dresden. Anschrift bitte vor dem Livegang noch einmal auf
+         datenschutz.sachsen.de gegenpruefen. -->
+
+    <p style="margin: 48px 0 0 0;">
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: inline-block; color: #D7B147; font-size: clamp(16px, 1.25vw, 18px); font-weight: 600; text-decoration: none;">Zurück zur Startseite</a>
+    </p>
+
+  </main>
+
+
+  <!-- ==================== FUSS ==================== -->
+  <footer style="background-color: #0B1116; border-top: 1px solid rgba(255,255,255,0.09); padding: clamp(48px, 6vw, 80px) 0 32px 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38" style="display: block; height: 38px; width: auto;">
+          <p style="margin: 18px 0 0 0; color: #A9B6C0; font-size: 15px; line-height: 1.65; max-width: 24em;">Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen. Geprüft, transparent und persönlich beraten.</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Seiten</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Startseite</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Performance Experience</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Über uns</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Fahrzeuge</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bestand auf mobile.de</a></li>
+            <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bewertungen</a></li>
+            <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Kontakt</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="tel:+4934122802620" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0341 22802620</a></li>
+            <li><a href="mailto:kontakt@rocktrade.de" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">kontakt@rocktrade.de</a></li>
+            <li style="color: #A9B6C0; font-size: 15px;">Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">© 2026 Rocktrade GmbH</p>
+        <nav style="display: flex; gap: 20px;">
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/impressum.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Impressum</a>
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Datenschutz</a>
+        </nav>
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>

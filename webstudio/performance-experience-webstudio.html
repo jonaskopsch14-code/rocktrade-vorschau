@@ -1,0 +1,445 @@
+<!-- ============================================================
+     ROCKTRADE GmbH — Seite "Performance Experience"
+     Fassung fuer WEBSTUDIO
+     ------------------------------------------------------------
+     Quelle: seite/performance-experience.html
+     Kopf, Fuss, Knopf-Stile, Abstaende und Farben sind 1:1 aus
+     startseite-webstudio.html uebernommen, damit alle Seiten
+     zusammenpassen.
+
+     Wie bei der Startseite gilt:
+       * Jede Gestaltung steht INLINE am Element. Kein <style>,
+         keine CSS-Datei, keine CSS-Variablen.
+       * Keine @media-Abfragen, kein :hover, kein :focus.
+         Responsiv ueber clamp() und Grids mit auto-fit.
+       * Kein <script>, keine SVG-Icons (dafuer Textzeichen),
+         alle Bilder und internen Links als absolute URL.
+
+     So kommt es hinein:
+       1. Diese Datei im Editor oeffnen, alles markieren, kopieren.
+       2. In Webstudio auf die Leinwand klicken und einfuegen.
+
+     Was hier gegenueber dem Original BEWUSST FEHLT, weil es
+     JavaScript braeuchte:
+       - das aufklappende Menue auf dem Handy
+       - die Live-Anzeige "Gewaehlt: noch keins" ueber der
+         Fahrzeugauswahl (wurde per JS nachgefuehrt)
+       - das Hervorheben der angeklickten Fahrzeugkarte per
+         :has(input:checked); stattdessen steht in jeder Karte
+         ein sichtbarer Auswahlknopf
+       - der Honigtopf (unsichtbares Spam-Feld), der nur mit
+         serverseitiger Auswertung Sinn ergibt
+       - das Absenden an buchung.php; Webstudio haengt seine
+         eigene Formular-Logik an
+       - die Einblend-Animationen beim Scrollen
+     Alle sichtbaren Texte, Bilder und Felder sind vollstaendig da.
+     ============================================================ -->
+
+<div style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B1116; color: #EDF1F4; line-height: 1.6; -webkit-font-smoothing: antialiased;">
+
+
+  <!-- ==================== KOPF ==================== -->
+  <header style="background-color: #0B1116; border-bottom: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: block; flex-shrink: 0;">
+        <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34" style="display: block; height: 34px; width: auto;">
+      </a>
+
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-left: auto;">
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Start</a>
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Fahrzeuge</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #D7B147; text-decoration: none; font-size: 15px; font-weight: 600;">Performance Experience</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Über uns</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Kontakt</a>
+        <a href="#buchen" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block;">Termin anfragen</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO ==================== -->
+  <section style="position: relative; background-color: #0B1116; background-image: linear-gradient(180deg, rgba(11,17,22,0.62) 0%, rgba(11,17,22,0.42) 30%, rgba(11,17,22,0.94) 86%, #0B1116 100%), linear-gradient(90deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0) 70%), url('https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/14-dodge-durango.jpg'); background-size: cover, cover, cover; background-position: center center; background-repeat: no-repeat;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: clamp(110px, 15vw, 210px) 24px clamp(56px, 7vw, 92px) 24px;">
+
+      <p style="margin: 0 0 18px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Performance Experience</p>
+
+      <h1 style="margin: 0; font-size: clamp(46px, 8vw, 92px); line-height: 1.02; font-weight: 800; letter-spacing: -0.02em; color: #EDF1F4; max-width: 16em;">Erst fahren.<br><span style="color: #D7B147;">Dann reden.</span></h1>
+
+      <p style="margin: 26px 0 0 0; font-size: clamp(18px, 1.4vw, 21px); line-height: 1.6; color: #A9B6C0; max-width: 34em;">Zehn Minuten um den Block sagen nichts über ein Auto mit 700 PS. Bei der Performance Experience nehmen Sie sich ein Fahrzeug aus unserem Bestand und erleben es so, wie es gebaut wurde.</p>
+
+      <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="#buchen" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Fahrzeug auswählen</a>
+        <a href="#ablauf" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Wie es abläuft</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== WORUM ES GEHT ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px; align-items: center;">
+
+        <div>
+          <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Worum es geht</p>
+          <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Eine Probefahrt, die diesen Namen verdient</h2>
+
+          <p style="margin: 22px 0 0 0; font-size: 19px; line-height: 1.65; color: #A9B6C0;">Ein V8 mit Kompressor zeigt sich nicht im Stadtverkehr. Deshalb gibt es die Performance Experience: Sie suchen sich vorher ein Fahrzeug aus, wir bereiten es vor, und dann haben Sie Zeit damit, auf einer Strecke, die zum Auto passt.</p>
+
+          <p style="margin: 16px 0 0 0; font-size: 17px; line-height: 1.65; color: #A9B6C0;">Am Ende wissen Sie, ob es Ihr Auto ist. Und falls ja, reden wir über den Rest.</p>
+
+          <ul style="margin: 30px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Fahrzeug vorher aussuchen, nicht nehmen was gerade dasteht</span></li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Dauer: stimmen wir vorab mit Ihnen ab</span></li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Begleitung durch einen Mitarbeiter</span></li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; color: #EDF1F4; font-size: 16px;"><span style="color: #D7B147; font-weight: 700;">✓</span><span>Voraussetzung: Führerschein Klasse B, Mindestalter nach Absprache</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/15-dodge-challenger.jpg" alt="Dodge Challenger SRT 392 Scat Pack im Showroom" width="1400" height="934" style="display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.09);">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FILM ==================== -->
+  <section style="background-color: #101A21; background-image: linear-gradient(180deg, #101A21, #0B1116); border-top: 1px solid rgba(255,255,255,0.09); border-bottom: 1px solid rgba(255,255,255,0.09); padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="max-width: 46em;">
+        <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">In zwei Minuten erklärt</p>
+        <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">So läuft eine Performance Experience ab</h2>
+        <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0;">Vom Anruf bis zur Rückgabe, einmal komplett gezeigt.</p>
+      </div>
+
+      <!-- AUSFUELLEN: Hier ist Platz fuer den Erklaerfilm reserviert (16:9).
+           Sobald die Datei da ist, in Webstudio an dieser Stelle ein
+           Video-Element einsetzen und dieses Platzhalter-Feld ersetzen.
+           Kein YouTube: das wuerde Besucherdaten an Google schicken und
+           ein Cookie-Banner noetig machen. -->
+      <div style="margin-top: 44px; aspect-ratio: 16 / 9; border-radius: 18px; border: 1px solid rgba(255,255,255,0.09); background-color: #101A21; background-image: radial-gradient(80% 80% at 50% 40%, rgba(0,97,128,0.34), rgba(0,97,128,0) 70%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; padding: 32px;">
+        <p style="margin: 0; color: #D7B147; font-size: 52px; line-height: 1;">▷</p>
+        <strong style="display: block; color: #EDF1F4; font-size: 19px; font-weight: 700;">Hier kommt der Erklärfilm hin</strong>
+        <p style="margin: 0; color: #7E8D99; font-size: 15px; line-height: 1.6; max-width: 32em;">Platz ist reserviert, 16:9. Sobald die Datei da ist, binde ich sie direkt ein.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== ABLAUF ==================== -->
+  <section id="ablauf" style="background-color: #0B1116; padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="max-width: 46em;">
+        <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Ablauf</p>
+        <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">In vier Schritten</h2>
+      </div>
+
+      <ol style="margin: 44px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 24px;">
+
+        <li style="display: grid; grid-template-columns: 3rem 1fr; gap: 20px; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid rgba(255,255,255,0.09);">
+          <span style="color: #D7B147; font-size: 16px; letter-spacing: 0.08em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">01</span>
+          <div>
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 20px; font-weight: 600;">Fahrzeug aussuchen</h3>
+            <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 16px; line-height: 1.65;">Unten auswählen, Wunschtermin dazu und abschicken. Dauert eine Minute.</p>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: 3rem 1fr; gap: 20px; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid rgba(255,255,255,0.09);">
+          <span style="color: #D7B147; font-size: 16px; letter-spacing: 0.08em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">02</span>
+          <div>
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 20px; font-weight: 600;">Wir melden uns</h3>
+            <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 16px; line-height: 1.65;">Wir bestätigen den Termin oder schlagen einen anderen vor und klären mit Ihnen die Formalitäten: Führerschein, Ablauf und Kaution.</p>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: 3rem 1fr; gap: 20px; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid rgba(255,255,255,0.09);">
+          <span style="color: #D7B147; font-size: 16px; letter-spacing: 0.08em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">03</span>
+          <div>
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 20px; font-weight: 600;">Der Termin</h3>
+            <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 16px; line-height: 1.65;">Kurze Einweisung ins Fahrzeug, dann geht es los. Die Strecke stimmen wir vorher ab. Wir kennen die Straßen um Leipzig, auf denen so ein Auto Sinn ergibt.</p>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: 3rem 1fr; gap: 20px; padding-top: 24px; padding-bottom: 24px; border-top: 1px solid rgba(255,255,255,0.09);">
+          <span style="color: #D7B147; font-size: 16px; letter-spacing: 0.08em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">04</span>
+          <div>
+            <h3 style="margin: 0; color: #EDF1F4; font-size: 20px; font-weight: 600;">Danach</h3>
+            <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 16px; line-height: 1.65;">Zurück im Showroom, in Ruhe reden. Ohne Verkaufsdruck, auch wenn Sie am Ende feststellen, dass es doch ein anderes Auto sein soll.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ==================== BUCHUNG ==================== -->
+  <section id="buchen" style="background-color: #101A21; background-image: linear-gradient(180deg, #101A21, #0B1116); border-top: 1px solid rgba(255,255,255,0.09); border-bottom: 1px solid rgba(255,255,255,0.09); padding: clamp(64px, 8vw, 112px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="max-width: 46em;">
+        <p style="margin: 0 0 14px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Termin anfragen</p>
+        <h2 style="margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.14; font-weight: 800; letter-spacing: -0.015em; color: #EDF1F4;">Welches Auto darf es sein?</h2>
+        <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0;">Fahrzeug antippen, Wunschtag eintragen, absenden. Die Anfrage ist unverbindlich. Verbindlich wird es erst, wenn wir uns bei Ihnen gemeldet haben.</p>
+      </div>
+
+      <!-- Kein action, kein method: Webstudio haengt hier seine eigene
+           Formular-Logik an. -->
+      <form style="margin-top: 44px; display: flex; flex-direction: column; gap: 24px; padding: clamp(24px, 3vw, 40px); background-color: #101A21; border: 1px solid rgba(255,255,255,0.09); border-radius: 18px;">
+
+        <div>
+          <p style="margin: 0; color: #EDF1F4; font-size: 16px; font-weight: 500;">Fahrzeug <span style="color: #D7B147;">*</span></p>
+
+          <!-- AUSFUELLEN: Auswahl geprueft am 15.08.2026. Wenn ein Fahrzeug
+               verkauft ist, hier austauschen - sonst kann jemand einen Termin
+               fuer ein Auto anfragen, das nicht mehr da ist. -->
+          <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/14-dodge-durango.jpg" alt="Dodge Durango SRT Hellcat" width="1400" height="934" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Dodge Durango SRT Hellcat, 719 PS" required style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Dodge Durango SRT Hellcat</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">529 kW / 719 PS · 6.2 V8 Kompressor</span>
+                </span>
+              </span>
+            </label>
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/01-porsche-cayenne.jpg" alt="Porsche Cayenne Turbo mit TECHART-Paket" width="1400" height="933" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Porsche Cayenne Turbo TECHART, 549 PS" style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Porsche Cayenne Turbo</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">404 kW / 549 PS · V8 Sport Chrono</span>
+                </span>
+              </span>
+            </label>
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/15-dodge-challenger.jpg" alt="Dodge Challenger SRT 392 Scat Pack" width="1400" height="934" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Dodge Challenger SRT 392 Scat Pack, 492 PS" style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Dodge Challenger SRT 392</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">362 kW / 492 PS · 6.4 V8 Scat Pack</span>
+                </span>
+              </span>
+            </label>
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/16-ford-mustang.jpg" alt="Ford Mustang mit 5.0 V8" width="1400" height="934" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Ford Mustang 5.0 V8 Premium Performance, 466 PS" style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Ford Mustang 5.0 V8</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">343 kW / 466 PS · Performance Package</span>
+                </span>
+              </span>
+            </label>
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/02-dodge-ram.jpg" alt="Dodge RAM Laramie Night" width="1400" height="934" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Dodge RAM 3.0 Twin Turbo Laramie Night, 420 PS" style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Dodge RAM Laramie Night</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">309 kW / 420 PS · 3.0 Twin Turbo</span>
+                </span>
+              </span>
+            </label>
+
+            <label style="display: block; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; overflow: hidden; background-color: #0B1116; cursor: pointer;">
+              <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/bilder/08-chevrolet-camaro.jpg" alt="Chevrolet Camaro Coupé" width="1400" height="934" style="display: block; width: 100%; height: 180px; object-fit: cover;">
+              <span style="display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px 20px 20px;">
+                <input type="radio" name="fahrzeug" value="Chevrolet Camaro 2.0 Turbo LT, 275 PS" style="width: 20px; height: 20px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+                <span style="display: block;">
+                  <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Chevrolet Camaro</b>
+                  <span style="display: block; margin-top: 4px; color: #D7B147; font-size: 13px; letter-spacing: 0.1em; font-family: ui-monospace, Consolas, 'Courier New', monospace;">202 kW / 275 PS · Performance Pack LT</span>
+                </span>
+              </span>
+            </label>
+
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="datum" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">Wunschtermin <span style="color: #D7B147;">*</span></label>
+            <input type="date" id="datum" name="datum" required style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit;">
+            <span style="color: #7E8D99; font-size: 13px;">Wir bestätigen den Tag oder schlagen einen anderen vor.</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="zeit" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">Tageszeit</label>
+            <select id="zeit" name="zeit" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit;">
+              <option value="">Ist mir gleich</option>
+              <option>Vormittag</option>
+              <option>Nachmittag</option>
+              <option>Später Nachmittag</option>
+              <option>Samstag</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div>
+          <p style="margin: 0 0 16px 0; color: #EDF1F4; font-size: 16px; font-weight: 500;">Zusatzwünsche</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+
+            <label style="display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; background-color: #0B1116; cursor: pointer;">
+              <input type="checkbox" name="extras" value="Begleitperson" style="width: 22px; height: 22px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+              <span style="display: block;">
+                <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Begleitperson</b>
+                <span style="display: block; margin-top: 2px; color: #7E8D99; font-size: 13px;">Jemand soll mitkommen</span>
+              </span>
+            </label>
+
+            <label style="display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; background-color: #0B1116; cursor: pointer;">
+              <input type="checkbox" name="extras" value="Foto- und Videoaufnahmen" style="width: 22px; height: 22px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+              <span style="display: block;">
+                <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Fotos und Video</b>
+                <span style="display: block; margin-top: 2px; color: #7E8D99; font-size: 13px;">Aufnahmen vom Termin</span>
+              </span>
+            </label>
+
+            <label style="display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; background-color: #0B1116; cursor: pointer;">
+              <input type="checkbox" name="extras" value="Laendliche Strecke" style="width: 22px; height: 22px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+              <span style="display: block;">
+                <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Landstraße statt Stadt</b>
+                <span style="display: block; margin-top: 2px; color: #7E8D99; font-size: 13px;">Strecke außerhalb</span>
+              </span>
+            </label>
+
+            <label style="display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; background-color: #0B1116; cursor: pointer;">
+              <input type="checkbox" name="extras" value="Beratung zum Kauf" style="width: 22px; height: 22px; margin: 2px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+              <span style="display: block;">
+                <b style="display: block; color: #EDF1F4; font-size: 16px; font-weight: 600;">Beratung zum Kauf</b>
+                <span style="display: block; margin-top: 2px; color: #7E8D99; font-size: 13px;">Danach in Ruhe sprechen</span>
+              </span>
+            </label>
+
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="name" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">Name <span style="color: #D7B147;">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="telefon" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">Telefon <span style="color: #D7B147;">*</span></label>
+            <input type="tel" id="telefon" name="telefon" required autocomplete="tel" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit;">
+            <span style="color: #7E8D99; font-size: 13px;">Für die Rückmeldung, schneller als per Mail.</span>
+          </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="email" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">E-Mail <span style="color: #D7B147;">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" style="width: 100%; min-height: 52px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit;">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="nachricht" style="color: #EDF1F4; font-size: 16px; font-weight: 500;">Noch etwas dazu?</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Zum Beispiel: Ich interessiere mich für den Wagen und überlege zu kaufen." style="width: 100%; min-height: 150px; padding: 12px 16px; background-color: #0B1116; border: 1px solid #6E7D8A; border-radius: 10px; color: #EDF1F4; font-size: 16px; font-family: inherit; line-height: 1.5; resize: vertical;"></textarea>
+        </div>
+
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <input type="checkbox" id="einwilligung" name="einwilligung" required style="width: 22px; height: 22px; margin: 3px 0 0 0; accent-color: #D7B147; flex-shrink: 0;">
+          <label for="einwilligung" style="color: #A9B6C0; font-size: 16px; line-height: 1.6;">Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. <span style="color: #D7B147;">*</span> Mehr dazu im <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #D7B147;">Datenschutz</a>.</label>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+          <button type="submit" style="background-color: #D7B147; color: #0B1116; border: 0; font-size: 16px; font-weight: 700; font-family: inherit; padding: 16px 28px; border-radius: 6px; min-width: 14rem; cursor: pointer;">Anfrage absenden</button>
+          <p style="margin: 0; color: #7E8D99; font-size: 13px;">Unverbindlich. Wir melden uns innerhalb eines Werktags.</p>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ==================== HINWEIS ==================== -->
+  <section style="background-color: #0B1116; padding: clamp(48px, 6vw, 64px) 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="background-color: #101A21; background-image: linear-gradient(120deg, rgba(0,97,128,0.28), rgba(11,17,22,0) 60%); border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; padding: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+        <div>
+          <h3 style="margin: 0; color: #EDF1F4; font-size: 24px; font-weight: 700;">Sie hätten lieber ein anderes Auto?</h3>
+          <p style="margin: 8px 0 0 0; color: #A9B6C0; font-size: 16px; line-height: 1.6; max-width: 42em;">Die sechs oben sind unser Vorschlag. Im Bestand stehen über hundert Fahrzeuge. Wenn Sie eins davon fahren möchten, rufen Sie einfach an.</p>
+        </div>
+        <a href="tel:+4934122802620" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">0341 22802620</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FUSS ==================== -->
+  <footer style="background-color: #0B1116; border-top: 1px solid rgba(255,255,255,0.09); padding: clamp(48px, 6vw, 80px) 0 32px 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38" style="display: block; height: 38px; width: auto;">
+          <p style="margin: 18px 0 0 0; color: #A9B6C0; font-size: 15px; line-height: 1.65; max-width: 24em;">Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen. Geprüft, transparent und persönlich beraten.</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Seiten</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Startseite</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Performance Experience</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Über uns</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Fahrzeuge</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bestand auf mobile.de</a></li>
+            <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bewertungen</a></li>
+            <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Kontakt</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="tel:+4934122802620" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0341 22802620</a></li>
+            <li><a href="mailto:kontakt@rocktrade.de" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">kontakt@rocktrade.de</a></li>
+            <li style="color: #A9B6C0; font-size: 15px;">Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">© 2026 Rocktrade GmbH</p>
+        <nav style="display: flex; gap: 20px;">
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/impressum.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Impressum</a>
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Datenschutz</a>
+        </nav>
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>

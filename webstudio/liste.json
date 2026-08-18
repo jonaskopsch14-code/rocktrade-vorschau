@@ -1,0 +1,10 @@
+[
+ {"id":"start","name":"Startseite","datei":"startseite-webstudio.html"},
+ {"id":"pe","name":"Performance Experience","datei":"performance-experience-webstudio.html"},
+ {"id":"ueber","name":"Ueber uns","datei":"ueber-uns-webstudio.html"},
+ {"id":"kontakt","name":"Kontakt","datei":"kontakt-webstudio.html"},
+ {"id":"impressum","name":"Impressum","datei":"impressum-webstudio.html"},
+ {"id":"datenschutz","name":"Datenschutz","datei":"datenschutz-webstudio.html"},
+ {"id":"danke","name":"Danke","datei":"danke-webstudio.html"},
+ {"id":"404","name":"404","datei":"404-webstudio.html"}
+]

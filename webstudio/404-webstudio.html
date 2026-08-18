@@ -1,0 +1,135 @@
+<!-- ============================================================
+     ROCKTRADE GmbH — Seite "404 / Seite nicht gefunden",
+     Fassung fuer WEBSTUDIO
+     ------------------------------------------------------------
+     Quelle: seite/404.html
+     Aufbau wie die bereits fertige Startseite (startseite-webstudio.html):
+
+       * Alle Gestaltung steht INLINE an jedem Element.
+         Webstudio uebernimmt beim Einfuegen nur Inline-Styles,
+         ein <style>-Block oder eine CSS-Datei wuerde verpuffen.
+       * Keine CSS-Variablen, keine @media-Abfragen, keine :hover.
+         Responsiv bleibt die Seite ueber clamp() und Grids mit
+         auto-fit sowie flex-wrap.
+       * Kein <script>, kein <style>, keine id-Attribute fuer JS.
+       * Keine SVG-Elemente, stattdessen Textzeichen.
+       * Alle Bilder und alle internen Links als ABSOLUTE URL.
+
+     So kommt es hinein:
+       1. Diese Datei im Editor oeffnen, alles markieren, kopieren.
+       2. In Webstudio auf die Leinwand klicken und einfuegen.
+
+     Was hier BEWUSST FEHLT, weil es JavaScript oder nicht-inline
+     CSS braeuchte:
+       - der Sprunglink "Zum Inhalt springen" (braucht :focus-visible
+         und ein Sprungziel per id)
+       - das aufklappende Menue auf dem Handy (Burger-Knopf)
+       - die automatische Jahreszahl im Fuss (id="jahr"), das Jahr
+         steht jetzt fest als Text
+       - der Gold-Strich vor der Augenbraue (war ein ::before)
+     Der komplette sichtbare Text der Originalseite ist vollstaendig da.
+
+     Hinweis: Der Fuss ist der vollstaendige Fuss aus der Musterdatei.
+     Die Originalseite 404.html zeigte nur die schmale Fusszeile.
+     In der Navigation ist bewusst KEIN Punkt gold hervorgehoben,
+     weil die 404-Seite keinem Navigationspunkt entspricht.
+     ============================================================ -->
+
+<div style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B1116; color: #EDF1F4; line-height: 1.6; -webkit-font-smoothing: antialiased;">
+
+
+  <!-- ==================== KOPF ==================== -->
+  <header style="background-color: #0B1116; border-bottom: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="display: block; flex-shrink: 0;">
+        <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="200" height="34" style="display: block; height: 34px; width: auto;">
+      </a>
+
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-left: auto;">
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Start</a>
+        <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Fahrzeuge</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Performance Experience</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Über uns</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #EDF1F4; text-decoration: none; font-size: 15px; font-weight: 500;">Kontakt</a>
+        <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block;">Rückruf anfordern</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== INHALT: FEHLER 404 ==================== -->
+  <main style="max-width: 704px; margin-left: auto; margin-right: auto; padding: clamp(64px, 9vw, 96px) 24px clamp(56px, 7vw, 80px) 24px;">
+
+    <p style="margin: 0 0 16px 0; color: #D7B147; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Fehler 404</p>
+
+    <h1 style="margin: 0; font-size: clamp(40px, 6.5vw, 68px); line-height: 1.14; font-weight: 800; letter-spacing: -0.025em; color: #EDF1F4;">Diese Seite gibt es nicht</h1>
+
+    <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0;">Entweder ist der Link alt, oder das Fahrzeug ist inzwischen verkauft. Beides passiert.</p>
+
+    <p style="margin: 16px 0 0 0; font-size: 18px; line-height: 1.65; color: #A9B6C0;">Der aktuelle Bestand steht immer auf <a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #D7B147; text-decoration: underline; text-underline-offset: 3px;">mobile.de</a>.</p>
+
+    <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px;">
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="background-color: #D7B147; color: #0B1116; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; display: inline-block;">Zur Startseite</a>
+      <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="background-color: transparent; color: #EDF1F4; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28); display: inline-block;">Kontakt</a>
+    </div>
+
+  </main>
+
+
+  <!-- ==================== FUSS ==================== -->
+  <footer style="background-color: #0B1116; border-top: 1px solid rgba(255,255,255,0.09); padding: clamp(48px, 6vw, 80px) 0 32px 0;">
+    <div style="max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px;">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+
+        <div>
+          <img src="https://jonaskopsch14-code.github.io/rocktrade-vorschau/assets/rocktrade-logo.svg" alt="Rocktrade GmbH" width="220" height="38" style="display: block; height: 38px; width: auto;">
+          <p style="margin: 18px 0 0 0; color: #A9B6C0; font-size: 15px; line-height: 1.65; max-width: 24em;">Exklusive Gebrauchtwagen aus Leipzig. US-Cars, SUV und Sportwagen. Geprüft, transparent und persönlich beraten.</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Seiten</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Startseite</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/performance-experience.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Performance Experience</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/ueber-uns.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Über uns</a></li>
+            <li><a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/kontakt.html" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Fahrzeuge</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="https://home.mobile.de/ROCKTRADEGMBH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bestand auf mobile.de</a></li>
+            <li><a href="https://www.mobile.de/bewertungen/RockTradeGmbH" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Bewertungen</a></li>
+            <li><a href="https://www.instagram.com/rocktrade_gmbh/" target="_blank" rel="noopener" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 14px 0; color: #EDF1F4; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Kontakt</h4>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+            <li><a href="tel:+4934122802620" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">0341 22802620</a></li>
+            <li><a href="mailto:kontakt@rocktrade.de" style="color: #A9B6C0; font-size: 15px; text-decoration: none;">kontakt@rocktrade.de</a></li>
+            <li style="color: #A9B6C0; font-size: 15px;">Ludwig-Hupfeld-Str. 23e<br>04178 Leipzig</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">© 2026 Rocktrade GmbH</p>
+        <nav style="display: flex; gap: 20px;">
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/impressum.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Impressum</a>
+          <a href="https://jonaskopsch14-code.github.io/rocktrade-vorschau/datenschutz.html" style="color: #7E8D99; font-size: 13px; text-decoration: none;">Datenschutz</a>
+        </nav>
+        <p style="margin: 0; color: #7E8D99; font-size: 13px;">Diese Seite lädt nichts von fremden Servern. Keine Cookies, kein Tracking.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>
