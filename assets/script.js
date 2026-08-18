@@ -24,7 +24,18 @@
     einblenden();
     aktiveSeiteMarkieren();
     formulareAbsichern();
-    fahrzeugeWechseln();
+
+    // ABGESCHALTET am 18.08.2026.
+    // Die Rotation hat die sechs handverlesenen Fahrzeuge aus index.html
+    // durch eine tagesabhaengige Auswahl aus fahrzeuge.json ersetzt.
+    // Ergebnis am 18.08.: vier Mal derselbe Dodge RAM statt Durango
+    // Hellcat, Porsche 992, Challenger, RAM, Maserati und Mustang.
+    // Die Startseite sah dadurch deutlich schwaecher aus als vorher.
+    //
+    // Die Funktion bleibt stehen. Wer sie wieder einschalten will,
+    // muss vorher in assets/fahrzeuge.json eine kuratierte Teilmenge
+    // hinterlegen, in der kein Modell mehrfach vorkommt.
+    // fahrzeugeWechseln();
   });
 
   /* ---------- Jahreszahl im Fuß ---------- */
